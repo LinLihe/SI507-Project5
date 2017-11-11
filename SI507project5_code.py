@@ -143,7 +143,7 @@ def get_tokens(client_key=CLIENT_KEY, client_secret=CLIENT_SECRET,request_token_
 
     return client_key, client_secret, resource_owner_key, resource_owner_secret, verifier
 
-def get_tokens_from_service(service_name_ident, expire_in_days=7): # Default: 7 days for creds expiration
+def get_tokens_from_service(service_name_ident, expire_in_days= float("inf")): # Default: 7 days for creds expiration
     creds_data = get_from_cache(service_name_ident, CREDS_DICTION)
     print (creds_data)
     if creds_data:
@@ -165,7 +165,7 @@ def create_request_identifier(url, params_diction):
     total_ident = url + "?" + params_str
     return total_ident.upper() # Creating the identifier
 
-def get_data_from_api(request_url,service_ident, params_diction, expire_in_days=7):
+def get_data_from_api(request_url,service_ident, params_diction, expire_in_days= float("inf")):
     """Check in cache, if not found, load data, save in cache and then return that data"""
     ident = create_request_identifier(request_url, params_diction)
     data = get_from_cache(ident,CACHE_DICTION)
