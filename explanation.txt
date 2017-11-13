@@ -1,6 +1,6 @@
     I am accessing the Tumblr search API and gathering:
-    - 20 Tumblr text blogs for each of 2 users I'm going to search for
+    - 20 Tumblr blogs with text type for each of 2 users I'm going to search for
     - For each blog, I'll be accessing the blog name, id, post date, post url, tags, the summary of blog (same as the title of blog here), the timestamp, the body of blog, format, type, state and reblog key
     - I'll write 2 CSV files (named by their blog name), one for each blog-identifier's search
     - Data in each CSV file: 4 columns -- time posted, url posted, blog's tags and summary
-    - URL for the API (which also includes the description of authentication process for the API): https://www.tumblr.com/docs/en/api/v2#auth
+    - URL for the API (which also includes the description of authentication process for the API): https://www.tumblr.com/docs/en/api/v2
